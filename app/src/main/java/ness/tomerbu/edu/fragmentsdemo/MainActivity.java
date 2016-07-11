@@ -59,10 +59,13 @@ public class MainActivity extends AppCompatActivity {
     public void setDate(View view) {
         getSupportFragmentManager().
                 beginTransaction().
-                replace(R.id.container, new ColorFragment()).
+                replace(R.id.container, new DateFragment()).
                 commit();
     }
 
     public void setMessage(View view) {
+        DateFragment fragment = new DateFragment();
+        fragment.show(getSupportFragmentManager(),"Date");
+
     }
 }
